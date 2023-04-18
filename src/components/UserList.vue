@@ -8,7 +8,7 @@
       <a-list-item>
         <a-card hoverable style="width: 240px">
           <template #cover>
-            <img alt="example" :src="gege" />
+            <img :alt="item.username" :src="item.userAvatar" />
           </template>
           <a-card-meta :title="item.userName">
             <template #description>{{ item.userProfile }}</template>
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import gege from "../assets/gege.jpg";
+// import gege from "../assets/avatar.jpg";
 import { withDefaults, defineProps } from "vue";
 
 interface Props {
