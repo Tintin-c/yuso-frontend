@@ -7,9 +7,10 @@
             <p v-html="item.content"></p>
           </template>
           <template #title
-          ><a href="https://www.antdv.com/" v-html="item.title"></a></template>
+            ><a href="https://www.antdv.com/" v-html="item.title"></a
+          ></template>
           <template #avatar>
-            <a-avatar :src="gege"/>
+            <a-avatar :src="gege" />
           </template>
         </a-list-item-meta>
       </a-list-item>
@@ -17,19 +18,21 @@
   </a-list>
 </template>
 
-<script setup lang="ts"> import gege from "../assets/avatar.jpg";
+<script setup lang="ts">
+import gege from "../assets/avatar.jpg";
 import { withDefaults, defineProps } from "vue";
 
-interface Post {
-  title: string;
-  content: string;
-}
-
 interface Props {
-  postList: Post[];
+  postList: any[];
 }
 
-const props = withDefaults(defineProps<Props>(), {postList: () => [] as Post[],}); </script>
-<style scoped> .gege {
+const props = withDefaults(defineProps<Props>(), {
+  postList: () => [],
+});
+</script>
+
+<style scoped>
+.gege {
   width: 200px;
-} </style>
+}
+</style>
